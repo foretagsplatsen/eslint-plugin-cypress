@@ -126,7 +126,7 @@ Rules with a check mark (✅) are enabled by default while using the `plugin:cyp
 |    | [no-single-expect-in-then-or-should](./docs/rules/no-single-expect-in-then-or-should.md) | Simplify tests by avoiding lonely expect()                      |
 |    | [no-expect-for-stub](./docs/rules/no-expect-for-stub.md)                                 | Avoid expect(stub)…                                             |
 |    | [no-useless-then-or-should](./docs/rules/no-useless-then-or-should.md)                   | Avoid `.should()` and `.then()` when only wrapping commands     |
-|    | [no-exclusive-tests](./docs/rules/no-exclusive-tests.md)                                 | Disallow use of the `it.only()` command                         |
+|    | [no-exclusive-tests](./docs/rules/no-exclusive-tests.md)                                 | Disallow use of the `it.only()` and `describe.only()` commands  |
 
 
 ## Chai and `no-unused-expressions`
