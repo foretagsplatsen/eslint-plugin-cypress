@@ -10,7 +10,6 @@ const parserOptions = { ecmaVersion: 6 }
 const validVariable = `'[data-cy=submit]'`
 const invalidVariable = `'.submit'`
 
-
 ruleTester.run('require-data-selectors', rule, {
   valid: [
     { code: 'cy.get(\'[data-cy=submit]\').click()', parserOptions },
