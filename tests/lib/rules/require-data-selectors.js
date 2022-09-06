@@ -7,6 +7,9 @@ const ruleTester = new RuleTester()
 
 const errors = [{ messageId: 'unexpected' }]
 const parserOptions = { ecmaVersion: 6 }
+const validVariable = `'[data-cy=submit]'`
+const invalidVariable = `'.submit'`
+
 
 ruleTester.run('require-data-selectors', rule, {
   valid: [
@@ -16,6 +19,7 @@ ruleTester.run('require-data-selectors', rule, {
     { code: 'cy.scrollTo(0, 10)', parserOptions },
     { code: 'cy.tick(500)', parserOptions },
     { code: 'cy.get(`[data-cy=${1}]`)', parserOptions },
+    { code: `cy.get(${validVariable})`, parserOptions },
     { code: 'cy.get("@my-alias")', parserOptions, errors },
     { code: 'cy.get(`@my-alias`)', parserOptions, errors },
   ],
@@ -27,5 +31,6 @@ ruleTester.run('require-data-selectors', rule, {
     { code: 'cy.get(".btn-.large").click()', parserOptions, errors },
     { code: 'cy.get(".a")', parserOptions, errors },
     { code: 'cy.get(`[daedta-cy=${1}]`)', parserOptions, errors },
+    { code: `cy.get(${invalidVariable})`, parserOptions, errors },
   ],
 })
