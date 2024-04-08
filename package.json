@@ -28,7 +28,7 @@
     "globals": "^13.15.0"
   },
   "devDependencies": {
-    "eslint": "^8.18.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-eslint-plugin": "^5.0.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
